@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3eeee39;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+
+.video-container {
+    position: relative;
+    background: #000;
+    overflow: hidden;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    background: rgba(45, 42, 42, 0.481);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
+
+button, select, input[type="range"] {
+    margin: 0 10px;
+    cursor: pointer;
+    border: 0.5 solid ;
+    border-radius: 20px;
+}
+
+button, select, input:hover {
+    background: rgb(186, 186, 137);
+    transition: 0.3s;
+}

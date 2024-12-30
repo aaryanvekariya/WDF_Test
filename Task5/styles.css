@@ -1,0 +1,159 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pricing-container {
+    max-width: 1200px;
+    width: 90%;
+    text-align: center;
+}
+
+
+.toggle-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.toggle-label {
+    font-size: 1.2rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
+.pricing-table {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.plan {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 20px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.plan.selected {
+    border-color: #2e8b57; 
+    box-shadow: 0 0 10px rgba(46, 139, 87, 0.5);
+}
+
+
+
+.plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.plan h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.plan .price {
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+.plan .features {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.plan button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.plan button:hover {
+    background: #0056b3;
+}
+
+.plan.recommended {
+    border: 2px solid #4caf50;
+    transform: scale(1.05);
+}
+
+
+.slider-container {
+    margin-top: 20px;
+}
+
+.slider-container input {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+    .plan {
+        flex: 1 1 100%;
+    }
+}

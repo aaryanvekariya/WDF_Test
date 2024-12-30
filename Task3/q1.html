@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-container">
+        <video id="video" width="640" height="360" src="./assets/song.mp4" preload="metadata"></video>
+        <div class="controls">
+            <button id="playPauseBtn">Play</button>
+            <input type="range" id="progressBar" value="0" step="0.1">
+            <button id="muteBtn">Mute</button>
+            <input type="range" id="volumeControl" value="100" step="1">
+            <select id="playbackSpeed">
+                <option value="0.5">0.5x</option>
+                <option value="1" selected>1x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2x</option>
+            </select>
+            <button id="fullscreenBtn">Fullscreen</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
